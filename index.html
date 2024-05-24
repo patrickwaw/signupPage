@@ -26,7 +26,7 @@
   <body>
     <h1>Signup Page</h1>
 
-    <form>
+    <form id="sign-up">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" /><br /><br />
 
@@ -36,9 +36,9 @@
       <label for="customerKey">Customer Key:</label>
       <input type="text" id="customerKey" name="customerKey" /><br /><br />
 
-      <input id="signUp" type="submit" value="Signup" />
+      <input type="submit" value="Signup" />
     </form>
-    <script>
+    <script type="text/javascript">
       function signUp() {
         growsumo.data.name = document.getElementById("name").value;
         growsumo.data.email = document.getElementById("email").value;
@@ -49,11 +49,11 @@
       }
 
       document
-        .getElementById("signUp")
+        .getElementById("sign-up")
         .addEventListener("submit", function (e) {
-          console.log("Form submitted with: ", growsumo.data);
           e.preventDefault();
           signUp();
+          console.log("Form submitted with: ", growsumo.data);
         });
     </script>
   </body>
