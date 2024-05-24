@@ -12,7 +12,7 @@
           var rs = this.readyState;
           if (rs && rs != "complete" && rs != "loaded") return;
           try {
-            growsumo._initialize("pk_J3lSyg38qDXerbbZ4NjLpreU4oMS7ToY");
+            growsumo._initialize("pk_nsNhRdnm7tX4YOTs1xTeBVdI7dovmjYE");
             if (typeof growsumoInit === "function") {
               growsumoInit();
             }
@@ -28,33 +28,32 @@
 
     <form>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name"/><br /><br />
+      <input type="text" id="name" name="name" /><br /><br />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email"/><br /><br />
+      <input type="email" id="email" name="email" /><br /><br />
 
       <label for="customerKey">Customer Key:</label>
-      <input
-        type="text"
-        id="customerKey"
-        name="customerKey"
-      /><br /><br />
+      <input type="text" id="customerKey" name="customerKey" /><br /><br />
 
       <input id="signUp" type="submit" value="Signup" />
     </form>
     <script>
-        function signUp() {
-            growsumo.data.name = document.getElementById("name").value;
-            growsumo.data.email = document.getElementById("email").value;
-            growsumo.data.customer_key = document.getElementById("customerKey").value;
+      function signUp() {
+        growsumo.data.name = document.getElementById("name").value;
+        growsumo.data.email = document.getElementById("email").value;
+        growsumo.data.customer_key =
+          document.getElementById("customerKey").value;
 
-            growsumo.createSignup();
-        }
+        growsumo.createSignup();
+      }
 
-        document.getElementById("signUp").addEventListener("submit", function (e) {
-            console.log('Form submitted with: ', growsumo.data);
-            e.preventDefault();
-            signUp();
+      document
+        .getElementById("signUp")
+        .addEventListener("submit", function (e) {
+          console.log("Form submitted with: ", growsumo.data);
+          e.preventDefault();
+          signUp();
         });
     </script>
   </body>
