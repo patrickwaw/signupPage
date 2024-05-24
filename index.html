@@ -22,6 +22,21 @@
         s.parentNode.insertBefore(gs, s);
       })();
     </script>
+    <script>
+        function signUp() {
+            growsumo.data.name = document.getElementById("name").value;
+            growsumo.data.email = document.getElementById("email").value;
+            growsumo.data.customer_key = document.getElementById("customerKey").value;
+
+            growsumo.createSignup();
+        }
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            console.log('Form submitted with: ', growsumo.data);
+            e.preventDefault();
+            signUp();
+        });
+    </script>
   </head>
   <body>
     <h1>Signup Page</h1>
