@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Signup Page</title>
-</head>
-<body>
+    <script type="text/javascript">
+      (function () {
+        var gs = document.createElement("script");
+        gs.src = "https://js.partnerstack.com/v1/";
+        gs.type = "text/javascript";
+        gs.async = "true";
+        gs.onload = gs.onreadystatechange = function () {
+          var rs = this.readyState;
+          if (rs && rs != "complete" && rs != "loaded") return;
+          try {
+            growsumo._initialize("pk_J3lSyg38qDXerbbZ4NjLpreU4oMS7ToY");
+            if (typeof growsumoInit === "function") {
+              growsumoInit();
+            }
+          } catch (e) {}
+        };
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(gs, s);
+      })();
+    </script>
+  </head>
+  <body>
     <h1>Signup Page</h1>
-    
+
     <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="customerKey">Customer Key:</label>
-        <input type="text" id="customerKey" name="customerKey" required><br><br>
-        
-        <input type="submit" value="Signup">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="customerKey">Customer Key:</label>
+      <input
+        type="text"
+        id="customerKey"
+        name="customerKey"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Signup" />
     </form>
-</body>
+  </body>
 </html>
